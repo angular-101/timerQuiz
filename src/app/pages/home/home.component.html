@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="content-wrapper">
+        <mat-form-field>
+            <mat-label>Name</mat-label>
+            <input matInput [(ngModel)]="quizService.userName"  placeholder="Enter your name"/>
+        </mat-form-field>
+        <button routerLink="/questions" class="start-button" mat-button>Start</button>
+        <h2>Leaderboard</h2>
+        <div class="leaderboard">
+            <div class="row row-header">
+                <div class="name-col">Username</div>
+                <div class="score-col">Score</div>
+            </div>
+            <div class="row" *ngFor="let item of quizService?.leaderBoardList">
+                <div class="name-col">{{item.username }}</div>
+                <div class="score-col">{{item.score}}</div>
+            </div>
+        </div>
+    </div>
+</div>

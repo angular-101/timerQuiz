@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="content-wrapper">
+        <div class="top-container">
+            <div class="score-container">
+                Score: {{quizService.currentScore}}
+            </div>
+            <div class="timer-container">
+                Time Left: {{this.timeLeft}}
+            </div>
+        </div>
+
+        <div class="question-container">
+            <div class="question" [innerHTML]="quizService.currentQuestion?.question">
+
+            </div>
+            <ng-container *ngFor="let option of quizService.currentQuestion?.incorrect_answers">
+                <button (click)="handleClick(option)"
+                    [class.correct-option]="quizService.userSelectedAns && option === quizService.currentQuestion?.correct_answer"
+                    [class.wrong-option]="quizService.userSelectedAns === option && !correctAns" class="option"
+                    mat-button [innerHTML]="option"></button>
+            </ng-container>
+        </div>
+    </div>
+</div>

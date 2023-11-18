@@ -1,0 +1,34 @@
+{
+  "leaderboard": [
+    {
+      "id": 1,
+      "username": "John",
+      "score": 90
+    },
+    {
+      "id": 2,
+      "username": "Jane",
+      "score": 85
+    },
+    {
+      "id": 3,
+      "username": "Mike",
+      "score": 100
+    },
+    {
+      "username": "Krish123",
+      "score": 2,
+      "id": 4
+    },
+    {
+      "username": "Prabhat",
+      "score": 0,
+      "id": 5
+    },
+    {
+      "username": "Kang The Conquerer",
+      "score": 0,
+      "id": 6
+    }
+  ]
+}
